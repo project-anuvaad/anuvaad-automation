@@ -1,3 +1,5 @@
+import traceback
+
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -6,9 +8,8 @@ import time
 INSTANT_TRANSLATE_ELE = (By.ID,'instant-translate')
 LANGUAGE_ELE = (By.ID,'demo-simple-select-outlined')
 INPUT_TXT_ELE = (By.ID,'standard-multiline-static')
-SUBMIT_ELE = (By.XPATH,'//button[.="submit"]')
-OUTPUT_ELE = (By.TAG_NAME,'h6')
-
+SUBMIT_ELE = (By.XPATH,'//button[.="Submit"]')
+OUTPUT_ELE = (By.XPATH,'//*[@id="root"]/div/div/div/div/div/div/div[5]/h6')
 
 def performtranslatesentence(driver,src_lang,tgt_lang,inp_file):
 
@@ -47,7 +48,7 @@ def performtranslatesentence(driver,src_lang,tgt_lang,inp_file):
     # get output text
     try:
         long_wait.until(EC.presence_of_element_located(OUTPUT_ELE))
-        output = driver.find_element(*OUTPUT_ELE).text.strip()
+        output = driver.find_elements(*OUTPUT_ELE)[-1].text.strip()
     except:
         output = 'no output'
     time.sleep(2)

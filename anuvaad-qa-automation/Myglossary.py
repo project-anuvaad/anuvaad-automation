@@ -17,7 +17,7 @@ def performglossary(driver,src_lang,tgt_lang,inp_file):
     # wait.until(EC.element_to_be_clickable(MY_GLOSSARY))
     # glossary_ele = driver.find_element(*MY_GLOSSARY)
     # glossary_ele.click()
-    driver.get('https://developers.anuvaad.org/my-glossary')
+    driver.get('https://jud.anuvaad.org/my-glossary')
     time.sleep(2)
 
     # # create glossary
@@ -53,7 +53,7 @@ def performglossary(driver,src_lang,tgt_lang,inp_file):
     # submit
     wait.until(EC.presence_of_element_located(SUBMIT_ELE))
     driver.find_element(*SUBMIT_ELE).click()
-    time.sleep(5)
+    time.sleep(10)
 
     # verify url redirection
     if "my-glossary" in driver.current_url:

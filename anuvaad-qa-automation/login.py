@@ -5,9 +5,9 @@ from selenium.webdriver.support import expected_conditions as EC
 import time
 
 # selector variables
-LOGIN_USERNAME = (By.ID,'email')
-LOGIN_PASSWORD = (By.ID,'passowrd')
-LOGIN_SUBMIT_BTN = (By.ID,'signin-btn')
+LOGIN_USERNAME = (By.NAME,'email')
+LOGIN_PASSWORD = (By.NAME,'password')
+LOGIN_SUBMIT_BTN = (By.XPATH,'//button[.="Login"]')
 LOGIN_CHECK = (By.ID,'view-document')
 
 def perform_login(driver):
@@ -19,7 +19,7 @@ def perform_login(driver):
     wait.until(EC.presence_of_element_located(LOGIN_USERNAME))
     uname_ele = driver.find_element(*LOGIN_USERNAME)
     uname_ele.send_keys(ANUVAAD_USERNAME)
-    time.sleep(2)
+    time.sleep(3)
 
     # enter password
     wait.until(EC.presence_of_element_located(LOGIN_PASSWORD))

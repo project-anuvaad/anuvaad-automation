@@ -18,7 +18,7 @@ VIEW_DOC = (By.XPATH,'//*[@id="MUIDataTableBodyRow-0"]/td[last()]//a[2]')
 DOWNLOAD_MAIN_BTN = (By.XPATH,'//button[.="Download"]')
 DOWNLOAD_AS_BTN = (By.XPATH,'//div[@id="menu-appbar"]//li[.="{0}"]')
 
-def performDocumentDigitization(driver, input_file,language, version):
+def performDocumentDigitization(driver, input_file,language):
     # go to digi page
     # wait for clicking
     wait = WebDriverWait(driver, 10)
@@ -46,23 +46,24 @@ def performDocumentDigitization(driver, input_file,language, version):
     wait.until(EC.element_to_be_clickable(SOURCE_LANG))
     source_lang_ele = driver.find_elements(*SOURCE_LANG)[0]
     source_lang_ele.click()
-    driver.find_element_by_id(language).click()
-    time.sleep(2)
+    driver.find_element(By.ID,language).click()
+    # time.sleep(2)
 
-    # click version
-    versiondict1 = {'1.0': 'WF_A_FCOD10GVOTK',
-             '1.5': 'WF_A_FCWDLDBSOD15GVOTK',
-             '2.0':'WF_A_FCWDLDBSOD20TESOTK'}
-
-    wait.until(EC.element_to_be_clickable(SOURCE_LANG))
-    version_ele = driver.find_elements(*SOURCE_LANG)[1]
-    version_ele.click()
-    driver.find_element_by_id(versiondict1[version]).click()
-    time.sleep(5)
+    # # click version
+    # versiondict1 = {'1.0': 'WF_A_FCOD10GVOTK',
+    #          '1.5': 'WF_A_FCWDLDBSOD15GVOTK',
+    #          '2.0':'WF_A_FCWDLDBSOD20TESOTK'}
+    #
+    # wait.until(EC.element_to_be_clickable(SOURCE_LANG))
+    # version_ele = driver.find_elements(*SOURCE_LANG)[1]
+    # version_ele.click()
+    # driver.find_element_by_id(versiondict1[version]).click()
+    # time.sleep(5)
 
     # click upload
     wait.until(EC.presence_of_element_located(UPLOAD_FILE))
     upload_ele = driver.find_element(*UPLOAD_FILE)
+
     #driver.execute_script("arguments[0].click()",upload_ele)  #it will run in backend(used JS)
     ActionChains(driver).move_to_element(upload_ele).perform() #used actions here
     upload_ele.click()
@@ -94,6 +95,7 @@ def performDocumentDigitization(driver, input_file,language, version):
         d_btn =list(DOWNLOAD_AS_BTN)
         d_btn[1] = d_btn[1].format(dtype)
         d_btn=tuple(d_btn)
+
         wait.until(EC.element_to_be_clickable(d_btn))
         driver.find_element(*d_btn).click()
         time.sleep(2)
