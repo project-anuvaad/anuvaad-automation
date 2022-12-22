@@ -1,9 +1,12 @@
-@author:hanumesh.kamatagi@Tarento
+---
+title: Anuvaad-automation
+author: Hanumesh Kamatagi
+---
 ## Overview
 The code in this repo could be utilized to automate procedures for  
 translating/digitizing the documents Anuvaad website.
 
->IMPORTANT : This Script requires Browser and its Respective Driver [Supported Browsers - Chrome].
+>IMPORTANT : This Script requires Chrome browser and its Respective Driver [Supported Browsers - Chrome].
 > 
 > ##Tests
 > 
