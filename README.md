@@ -3,6 +3,9 @@
 | Hanumesh Kamatagi | `   Anuvaad-automation      |
 | Apoorva Bellary | Anuvaad-Testing Stratergies |
 | Apoorva Bellary | Anuvaad-API Automation |
+| Hanumesh Kamatagi | `   Anuvaad-automation      |
+| Apoorva Bellary | ulca-UI automation |
+| Apoorva Bellary | Ulca-API Automation |
 
 ## Overview
 The code in this repo could be utilized to automate procedures for  
