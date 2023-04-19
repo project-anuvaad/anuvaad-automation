@@ -4,7 +4,7 @@
 | Apoorva Bellary | Anuvaad-Testing Stratergies |
 | Apoorva Bellary | Anuvaad-API Automation |
 | Hanumesh Kamatagi | `   Anuvaad-automation      |
-| Apoorva Bellary | ulca-UI automation |
+| Apoorva Bellary | Ulca-UI automation |
 | Apoorva Bellary | Ulca-API Automation |
 
 ## Overview
