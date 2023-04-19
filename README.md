@@ -2,6 +2,7 @@
 | ---      | ---       |
 | Hanumesh Kamatagi | `   Anuvaad-automation      |
 | Apoorva Bellary | Anuvaad-Testing Stratergies |
+| Apoorva Bellary | Anuvaad-API Automation |
 
 ## Overview
 The code in this repo could be utilized to automate procedures for  
