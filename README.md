@@ -1,7 +1,8 @@
----
-title: Anuvaad-automation
-author: Hanumesh Kamatagi
----
+| Author   | Title |
+| ---      | ---       |
+| Hanumesh Kamatagi | `   Anuvaad-automation      |
+| Apoorva Bellary | Anuvaad-Testing Stratergies |
+
 ## Overview
 The code in this repo could be utilized to automate procedures for  
 translating/digitizing the documents Anuvaad website.
