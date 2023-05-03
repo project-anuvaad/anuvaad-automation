@@ -19,8 +19,8 @@ class MyReqRes(SequentialTaskSet):
         def login(self):
             # admin login and retrieving it's access token
             response = self.client.post( "https://auth.anuvaad.org/anuvaad/user-mgmt/v1/users/login",name='login',
-                                json={'userName': 'apoorva.bellary@tarento.com',
-                                            'password': 'Hello@123'})
+                                json={'userName': *********,
+                                            'password': *********})
             output=json.loads(response._content)
             self.auth=output["data"]["token"]
          
